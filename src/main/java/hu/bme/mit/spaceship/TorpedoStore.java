@@ -13,6 +13,10 @@ public class TorpedoStore {
   private double FAILURE_RATE = 0.0; //NOSONAR
 
   private int torpedoCount = 0;
+  // A Random példányt egyszer hozzuk létre és újrahasznosítjuk, mert minden
+  // példányosítás feleslegesen sok effort, és új seeddel inicializálja a generátort. 
+  // Így sokkal hatékonyabb.
+  private final Random generator = new Random();
   private final Random generator = new Random();
   public TorpedoStore(int numberOfTorpedos){
     this.torpedoCount = numberOfTorpedos;
