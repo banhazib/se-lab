@@ -17,7 +17,6 @@ public class TorpedoStore {
   // példányosítás feleslegesen sok effort, és új seeddel inicializálja a generátort. 
   // Így sokkal hatékonyabb.
   private final Random generator = new Random();
-  private final Random generator = new Random();
   public TorpedoStore(int numberOfTorpedos){
     this.torpedoCount = numberOfTorpedos;
 
